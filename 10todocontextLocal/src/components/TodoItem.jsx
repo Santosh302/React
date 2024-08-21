@@ -8,6 +8,8 @@ function TodoItem({ todo }) {
 
   const editTodo = () => {
     updateTodo(todo.id, {...todo, todo: todoMsg})
+    /* Suppose todo is { id: 1, todo: 'Buy milk', completed: false } and todoMsg is 'Buy groceries'.
+       The new object created will be { id: 1, todo: 'Buy groceries', completed: false }. */
     setIsTodoEditable(false)
   }
   const toggleCompleted = () => {
